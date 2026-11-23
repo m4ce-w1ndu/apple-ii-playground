@@ -26,7 +26,7 @@ The `Makefile` expects the following binaries inside `tools/` (gitignored):
 
 ## Workflow
 
-1. Create a 6502 assembly program in `src/` (for example `src/hello.s`, targeting `.org $6000`).
+1. Create a 6502 assembly program in `src/<name>/<name>.s` or `src/<name>.s` (for example `src/hello/hello.s`, targeting `.org $6000`).
 2. Assemble, inject onto `disks/mydisk.dsk`, and boot Linapple:
    ```bash
    make run PROG=hello
