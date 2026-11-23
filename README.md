@@ -50,6 +50,23 @@ The `Makefile` expects the following binaries inside `tools/` (gitignored):
 | `make reset-disk` | Recreate a fresh blank `disks/mydisk.dsk` |
 | `make clean` | Remove the `build/` directory |
 
+## Learning Roadmap
+
+Follow the step-by-step **[6502 Mastery Roadmap](ROADMAP.md)** to go from your first `HELLO, WORLD!` to a complete assembly game—building transferable low-level fundamentals for ARM64, RISC-V, and x86-64.
+
+| Stage | Focus | Project | Status |
+| :---: | :--- | :--- | :---: |
+| **0** | ROM Calls, High-Bit ASCII & DOS 3.3 | `src/hello/hello.s` | ✅ |
+| **1** | Registers, Flags & Loops | `src/hexdump/hexdump.s` | ⬜ |
+| **2** | Zero Page & `(zp),Y` Pointers | `src/textdraw/textdraw.s` | ⬜ |
+| **3** | 16-Bit Math & Signed Logic | `src/math16/math16.s` | ⬜ |
+| **4** | Hardware Stack, ABI & Jump Tables | `src/stacklab/stacklab.s` | ⬜ |
+| **5** | MMIO & Cycle-Counted Audio | `src/piano/piano.s` | ⬜ |
+| **6** | Bitmapped Graphics & Lookup Tables | `src/sprite/sprite.s` | ⬜ |
+| **7** | Final Boss: Playable Arcade Game | `src/arcade/arcade.s` | ⬜ |
+
+See [ROADMAP.md](ROADMAP.md) for the visual progression diagram, stage checklists, and a **6502 → Modern Architecture** cheat sheet.
+
 ## Apple II Quick Reference
 
 - **Safe User RAM:** `$0800`–`$95FF` (`raw.cfg` loads binaries at `$6000`, clear of BASIC and DOS 3.3)
