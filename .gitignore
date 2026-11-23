@@ -1,0 +1,5 @@
+build/
+tools/
+disks/mydisk.dsk
+*.o
+*.bin
