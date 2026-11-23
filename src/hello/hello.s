@@ -16,7 +16,9 @@ print_loop:
     lda message, x                  ; Load message address (first character) into A
     beq done                        ; branch to "done" if the character is NULL terminator
     ora #$80                        ; Set the high bit for text mode
+    stx $06                         ; save X (DOS 3.3 compatibility)
     jsr COUT                        ; Print the character to the screen
+    ldx $06                         ; restore X
     inx                             ; Increment X to point to the next character
     jmp print_loop                  ; If not reached end of string, keep going
 
